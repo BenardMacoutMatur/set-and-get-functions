@@ -1,0 +1,98 @@
+#include <iostream>
+
+using namespace std;
+
+class student{
+
+ private:
+     int age;
+     string house_estate;
+     float height;
+
+ public:
+    string hostel;
+    string name;
+    int shoe_size;
+    string course;
+
+    int  set_age()
+    {
+        cout<<"Enter your age: ";
+        cin>>age;
+        return age;
+    }
+
+    int get_age()
+    {
+        cout<<"Your age is "<<age;
+    }
+
+    string set_house_estate()
+    {
+       cout<<"Enter your house estate: ";
+       getline(cin,house_estate);
+       return house_estate;
+
+    }
+
+    string get_house_estate()
+    {
+       cout<<"Your house is "<<house_estate;
+    }
+
+    float set_height()
+    {
+        cout<<"How tall are you: ";
+        cin>>height;
+        return height;
+    }
+
+    float get_height()
+    {
+        cout<<"Your height is "<<height;
+    }
+
+    /*friend class student()
+    {
+        cout<<"Enter your age: ";
+        cin>>age;
+        cout<<"Enter your house estate: ";
+        getline(cin,house_estate);
+        cout<<"How tall are you: ";
+        cin>>height;
+
+    }*/
+    student()// My constructor
+    {
+       cout<<"Enter your hostel name: ";
+       getline(cin,hostel);
+       cout<<"Enter your name: ";
+       getline(cin,name);
+       cout<<"Enter your shoe size: ";
+       cin>>shoe_size;
+       cout<<"Enter your course at the university: ";
+       getline(cin,course);
+    }
+
+    void display_student_details()
+    {
+        cout<<" Your age is "<<age<<" while your house estate name is "<<house_estate<<" and you are "<<height<<"tall";
+        cout<<" Your hostel name is "<<hostel<<" and your name is "<<name<<" while your shoe size is "<< shoe_size<<" and your course at the university is "<<course;
+    }
+
+
+};
+
+int main()
+{
+    student s;
+
+    s.set_age();
+    s.get_age();
+    s.set_house_estate();
+    s.get_house_estate();
+    s.set_height();
+    s.get_height();
+    s.display_student_details();
+    return 0;
+}
